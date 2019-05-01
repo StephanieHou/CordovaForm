@@ -1,0 +1,434 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: white;
+    background-attachment: fixed;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+/* Portrait layout (default) */
+
+.app {
+    background: url(../img/dglogo.png) no-repeat center top;
+    /* 170px x 200px */
+    position: absolute;
+    /* position in the center of the screen */
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    /* text area height */
+    width: 225px;
+    /* text area width */
+    text-align: center;
+    padding: 180px 0px 0px 0px;
+    /* image height is 200px (bottom 20px are overlapped with text) */
+    margin: -115px 0px 0px -112px;
+    /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+}
+
+.orange {
+    background-color: #FF662A;
+    width: 100%;
+    color: white;
+}
+
+.cursive {
+    font-style: oblique;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Navbar */
+
+.ui-navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #fc6719 !important;
+}
+
+.ui-block-a {
+    width: 70% !important;
+}
+
+.ui-block-b {
+    width: 10% !important;
+}
+
+.ui-block-c {
+    width: 10% !important;
+}
+
+.ui-block-d {
+    width: 10% !important;
+}
+
+.ui-block-b a,
+.ui-block-c a,
+.ui-block-d a {
+    height: 100% !important;
+    text-align: center;
+    border: none !important;
+    font-size: 1em !important;
+    line-height: 60px;
+}
+
+a.active {
+    background-color: #FF9963 !important;
+    color: black !important;
+    border: 1px solid #fc6719 !important;
+    border-top: none !important;
+    text-shadow: none !important;
+}
+
+a.inactive {
+    background-color: #fc6719 !important;
+    color: white !important;
+}
+
+a.inactive:hover {
+    background-color: #FF9963 !important;
+    color: black !important;
+    text-shadow: none !important;
+}
+
+a.ui-link.ui-btn {
+    margin: 0 auto !important;
+    padding: 0px !important;
+    vertical-align: middle;
+}
+
+li.ui-block-b,
+li.ui-block-c,
+li.ui-block-d {
+    height: 72px !important;
+    text-align: center !important;
+}
+
+.mobile-hamnav {
+    display: none !important;
+}
+
+.mobile-hamnav a {
+    background-color: #fc6719 !important;
+    color: white !important;
+}
+
+.panel-ul a {
+    background-color: #fc6719 !important;
+    border: white 1px solid !important;
+    width: 185px !important;
+    color: white !important;
+}
+
+.panel-content img {
+    margin-bottom: 10px !important;
+}
+
+#panel-close {
+    width: 100px !important;
+    padding: 5px 70px !important;
+    background-color: #fc6719 !important;
+    border: white 1px solid !important;
+    color: white !important;
+    margin-top: 20px !important;
+}
+
+/* Header */
+
+.ui-bar-inherit {
+    background-color: white !important;
+    border: none !important;
+}
+
+.ui-field-contain {
+    text-shadow: none !important;
+    border-bottom-color: white !important;
+}
+
+.consent-header {
+    padding: 100px 10% 0px 10%;
+}
+
+.consent-header .ui-title {
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+/* Footer */
+
+.consent-footer .ui-title {
+    font-size: 14px !important;
+    padding: 20px 10% 20px 10% !important;
+    color: white;
+    background-color: #FF662A;
+    font-weight: normal;
+    margin: 0 auto !important;
+}
+
+.consent-footer {
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+}
+
+/* Form */
+
+.ui-content {
+    background-color: white;
+    border: none;
+    padding: 0px 10% 50px 10% !important;
+}
+
+b {
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 22px !important;
+    font-weight: bold;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    color: #fc6719;
+    background-color: white;
+}
+
+h3 {
+    color: #fc6719;
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px !important;
+}
+
+p,
+li {
+    font-size: 15px !important;
+}
+
+.ui-content input {
+    border: none;
+    border-bottom: 1px black solid;
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+div.ui-checkbox,
+input[type="checkbox"] {
+    position: static !important;
+}
+
+input[type="checkbox"] {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+div.ui-checkbox {
+    float: right;
+}
+
+.clear.cbinput {
+    width: 85%;
+}
+
+.clear.cbinput input[type="csignature"] {
+    width: 94%;
+}
+
+div.ui-btn,
+input[type="submit"] {
+    border: 1px solid #fc6719 !important;
+    text-decoration: none !important;
+    background: #fc6719 !important;
+    text-shadow: none !important;
+    color: white !important;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+div.ui-input-text,
+input[type="email"] {
+    background-color: none !important;
+    border: none !important;
+    width: 80%;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    font-size: 15px !important;
+    margin: 0px 0px 5px 0px !important;
+    padding: 0px !important;
+    min-height: 1.5em !important;
+}
+
+input[type="email"] {
+    border-bottom: 1px black solid !important;
+}
+
+.leftalign, .bleftalign {
+    width: 100%;
+    height: 50px;
+}
+
+.leftalign > div {
+    float: left;
+    width: 26.7%;
+}
+
+.bleftalign > div {
+    float: left;
+    width: 44.5%;
+}
+
+.leftalign input, .bleftalign input{
+width: 100%;
+}
+
+input#email{
+    padding: 0.5px 0px !important;
+}
+
+/* Pop Up */
+
+.ui-popup .ui-title {
+    background-color: #fc6719 !important;
+    color: white !important;
+    text-overflow: initial !important;
+    font-size: 18px !important;
+}
+
+.ui-popup .ui-header {
+    background-color: #fc6719 !important;
+    text-shadow: none !important;
+}
+
+.ui-popup .ui-content .ui-title {
+    background-color: white !important;
+    color: #fc6719 !important;
+    text-shadow: none !important;
+}
+
+.ui-popup .ui-content .ui-btn {
+    background-color: #fc6719 !important;
+    color: white !important;
+    width: 110px !important;
+    border: none !important;
+    text-shadow: none !important;
+}
+
+.event {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 0px 30px;
+    padding: 2px 0px;
+}
+
+.event.listening {
+    background-color: #fc6719;
+    display: block;
+}
+
+.event.received {
+    background-color: #4B946A;
+    display: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+.blink {
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+/* Landscape layout (with min-width) */
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position: left center;
+        padding: 75px 0px 75px 170px;
+        /* padding-top + padding-bottom + text area = image height */
+        margin: -90px 0px 0px -198px;
+        /* offset vertical: half of image height */
+        /* offset horizontal: half of image width and text area width */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ui-block-a {
+        width: 85% !important;
+    }
+    .ui-block-b {
+        border: none !important;
+        width: 66px !important;
+        padding: 12px !important;
+    }
+    .ui-block-b a {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    .mobile-hamnav {
+        display: block !important;
+    }
+    .desktop-nav {
+        display: none !important;
+    }
+}
