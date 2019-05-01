@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; font-src 'self' data:; default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    <title>Dennis Gross Consent Form</title>
+</head>
+
+<body>
+    <div class="app">
+        <h1>PhoneGap</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+    </div>
+
+    <div data-role="page">
+        <div class="orange">
+            <div data-role="navbar">
+                <ul class="desktop-nav">
+                    <li><img src="header.png" width="680px" /></li>
+                    <li><a href="" class="active">Form</a></li>
+                    <li><a href="" id="data" class="inactive">Data</a></li>
+                    <li><a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="inactive">Log
+                            Out</a></li>
+                </ul>
+                <ul class="mobile-hamnav">
+                    <li><img src="header.png" width="680px" /></li>
+                    <li><a href="#panel" data-role="button" data-inline="true" data-mini="true"><img src="icon-hamburger.png"
+                                width="100%" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="header" class="consent-header">
+            <h1>Dr. DENNIS GROSS SKINCARE™ <br /> CONSENT AND WAIVER FORM </h1>
+            <h3>Alpha Beta® Face Peel Professional System</h3>
+        </div>
+        <div class="ui-content" data-role="main">
+            <form>
+                <div class="ui-field-contain">
+                    <div class="clear">
+                        <label for="name">
+                            <b>Name:</b>
+                        </label>
+                        <input id="name" type="name" name="name" required />
+                    </div>
+                    <div class="clear">
+                        <label for="age">
+                            <b>Age: </b>
+                        </label>
+                        <input id="age" type="age" name="age" required />
+                    </div>
+                    <div class="clear">
+                        <label for="address">
+                            <b>Address:</b>
+                        </label>
+                        <input id="address" type="address" name="address" required />
+                    </div>
+                    <div class="leftalign">
+                        <div class="clear third">
+                            <label for="city">
+                                <b>City: </b>
+                            </label>
+                            <input id="city" type="city" name="city" required /></div>
+                        <div class="clear third">
+                            <label for="state">
+                                <b>State: </b>
+                            </label>
+                            <input id="state" type="state" name="state" required />
+                        </div>
+                        <div class="clear third">
+                            <label for="zip">
+                                <b>Zip: </b>
+                            </label>
+                            <input id="zip" type="zip" name="zip" required />
+                        </div>
+                    </div>
+                    <div class="bleftalign">
+                        <div class="clear">
+                            <label for="phone">
+                                <b>Phone: </b>
+                            </label>
+                            <input id="phone" type="phone" name="phone" required />
+                        </div>
+                        <div class="clear">
+                            <label for="email">
+                                <b>Email: </b>
+                            </label>
+                            <input id="email" type="email" name="email" required />
+                        </div>
+                    </div>
+                    <p>The Alpha Beta® Face Peel Professional System is a safe and highly effective treatment but may
+                        cause some individual sensitivity. </p>
+                    <p><strong>
+                            Prior to receiving the Alpha Beta® Face Peel Professional System, please confirm the
+                            following: </strong></p>
+                    <ol>
+                        <li>I am not currently taking and have not used Retin-A®, Renova®, Differin®, Tazorac®,
+                            prescription strength Benzoyl Peroxide, Avita® or any other prescription topical
+                            medications for 48 hours prior to this treatment. </li>
+                        <li>I am not currently taking and have not used Accutane® for 6 months. </li>
+                        <li>I have avoided sun exposure for 24 hours prior to this treatment. </li>
+                        <li>I have not waxed the treatment area in the past 7 days. </li>
+                        <li>I understand this treatment contains salicylic acid. I am not allergic to aspirin. I
+                            understand that if I was, I should not receive this treatment. </li>
+                        <li>I understand this treatment is not intended for anyone pregnant or lactating. </li>
+                        <li>Men should not shave within 4 hours prior to treatment. </li>
+                    </ol>
+                    <p>The Alpha Beta® Face Peel Professional System cannot be performed on areas with any form of
+                        dermatitis, including rashes, open wounds, cold sores, eczema and psoriasis. </p>
+                    <p><strong>
+                            Following the Alpha Beta® Face Peel Professional System, it is important that you
+                            understand the following: </strong></p>
+                    <ol>
+                        <li>Avoid application of toners containing alcohol or Benzyl Peroxide for 12 hours after the
+                            treatment. </li>
+                        <li>Avoid the use of the Alpha Beta® Daily Face Peel, Retin-A®, Renova®, Differin®, Tazorac®,
+                            prescription strength Benzoyl Peroxide, Avita® or any prescription topical medications for
+                            24 hours after the treatment. </li>
+                        <li>You should wait 24 hours before using products containing active ingredients or performing
+                            another facial. </li>
+                        <li>Excessive flushing of the skin is strongly discouraged within 24 hours of the Alpha Beta®
+                            Face Peel Professional System. This includes swimming, sauna, or intense aerobic activity.
+                        </li>
+                        <li>Avoid facial waxing for 7 days following the Alpha Beta® Daily Face Peel Professional
+                            System. </li>
+                        <li>Your skin may appear pink immediately after the treatment. Though uncommon, your skin may
+                            flake or peel for a few days following the Alpha Beta® Face Peel Professional System. </li>
+                        <li>Avoid extended sun exposure. </li>
+                        <li>You must apply and reapply a sunscreen during the day- SPF 30 or higher. </li>
+                    </ol>
+                    <p><strong>I agree that I have read and understand the above. I release Dr. Dennis Gross Skincare®
+                            from any and all damages associated with the treatment. </strong></p>
+                </div>
+                <div class="clear cbinput">
+                    <label for="csignature">
+                        <b>Client Signature (Checkbox To Use Initials):</b>
+                    </label>
+                    <input id="csignature" class="cursive" type="csignature" name="csignature" required />
+                    <input type="checkbox" id="checkInitial" onclick="getInitial()">
+                </div>
+                <div class="clear">
+                    <label for="cdate">
+                        <b>Date: </b>
+                    </label>
+                    <input id="cdate" type="cdate" name="cdate" required /></div>
+                <div class="clear">
+                    <label for="tsignature">
+                        <b>Therapist Signature:</b>
+                    </label>
+                    <input id="tsignature" class="cursive" type="tsignature" name="tsignature" />
+                </div>
+                <div class="clear">
+                    <label for="tdate">
+                        <b>Date:</b>
+                    </label>
+                    <input id="tdate" type="tdate" name="tdate" />
+                </div>
+                <input type="submit" value="Submit" data-inline="true" />
+            </form>
+        </div>
+        <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="width:400px;">
+            <div data-role="header" data-theme="a">
+                <h1>Leaving DGS</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h3 class="ui-title">Are you sure you want to log out?</h3>
+                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="logout" data-transition="flow">Yes</a>
+                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">No</a>
+            </div>
+        </div>
+        <div data-role="footer" class="consent-footer">
+            <h1>Copyright 2018 Dr. Dennis Gross Skincare LLC</h1>
+        </div>
+        <div data-role="panel" id="panel" data-position="left" data-display="overlay" data-dismissible="true"
+            data-theme="a" data-position-fixed="true">
+            <div class="panel-content">
+                <img src="dglogo.png" width="240px" />
+                <ul data-role="listview" data-inset="true" data-theme="a" class="panel-ul">
+                    <li><a href="">Form</a></li>
+                    <li><a href="" id="m-data">Consent Data</a></li>
+                    <li><a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="inactive">Log
+                            Out</a></li>
+                </ul>
+                <a href="#demo-links" id="panel-close" data-rel="close" data-role="button" data-theme="a" data-icon="delete"
+                    data-inline="true">Close</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+    <script type="text/javascript">
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        var current = mm + '/' + dd + '/' + yyyy;
+
+        document.getElementById("cdate").value = current;
+        document.getElementById("tdate").value = current;
+
+        function getInitial() {
+            var checkBox = document.getElementById("checkInitial");
+            var fullname = document.getElementById("name").value;
+            var namearr = fullname.split(" ");
+
+
+            if (checkBox.checked == true) {
+                if (namearr.length >= 2) {
+                    var first = namearr[0].slice(0, 1);
+                    var last = namearr[1].slice(0, 1);;
+                    document.getElementById("csignature").value = first + "." + last;
+                }
+                else {
+                    document.getElementById("csignature").value = null;
+                    checkBox.checked = false;
+                    alert('Please enter a first and last name.');
+                }
+
+            } else {
+                document.getElementById("csignature").value = null;
+            }
+        }
+
+        $('form').submit(function () {
+            var postData = $(this).serialize();
+
+            $.ajax({
+                type: 'POST',
+                data: postData,
+                url: 'https://blog.drdennisgross.com/stephanie/mobile/sephora/formsubmit.php',
+                success: function (data) {
+                    console.log(data);
+                    $('form').trigger("reset");
+                    document.getElementById("cdate").value = current;
+                    document.getElementById("tdate").value = current;
+                    alert('Your information was successfully added.');
+                },
+                error: function () {
+                    console.log(data);
+                    alert('There was an error adding your information.');
+                }
+            });
+            return false;
+        });
+
+        $("#data").click(function () {
+            window.location.href = "data.html";
+        });
+
+        $("#logout").click(function () {
+            window.location.href = "index.html";
+        });
+
+        $("#m-data").click(function () {
+            window.location.href = "data.html";
+        });
+
+        $("#m-logout").click(function () {
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+
+</html>
